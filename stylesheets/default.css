@@ -141,3 +141,9 @@ h1 {
     font-size: 24px;
     line-height: 1;        /* Prevents extra font padding from pushing it down */
 }
+
+.logo {
+    display: block;       /* Changes the image from inline to block */
+    margin-left: auto;    /* Automatically calculates left margin */
+    margin-right: auto;   /* Automatically calculates right margin */
+  }
