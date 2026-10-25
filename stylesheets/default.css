@@ -1,0 +1,143 @@
+/* 1. Fonts and Roots */
+@font-face {
+    font-family: "Eas VHS";
+    src: url("https://cruzjs.com/files/fonts/Eas-vhs.ttf") format("truetype");
+}
+
+:root {
+    font-family: "Eas VHS", sans-serif;
+}
+
+/* 2. Global Styles */
+* {
+    box-sizing: border-box; /* Ensures padding doesn't break your layouts */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #111216; /* Clean, dark base fallback */
+    background-image: linear-gradient(rgba(17, 18, 22, 0.9), rgba(17, 18, 22, 0.9)); /* Tint overlay */
+    color: white; 
+    padding: 20px; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    
+    /* Background rules optimized */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* 3. Navigation Bar Layout */
+.navigation {
+    display: flex;
+    justify-content: center; /* Centers the links across the page */
+    gap: 15px; /* Adds clean spacing between links */
+    padding: 10px 0;
+}
+
+.navigation a {
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly translucent white container */
+    color: white; /* FIXED: Changed from black to white so it's readable! */
+    text-align: center;
+    
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 24px; /* Reduced slightly from 40px so it fits smaller screens */
+    border-radius: 5px;
+    border: 2px outset rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.navigation a:hover {
+    background-color: white;
+    color: black; /* Flips colors on hover for a crisp retro effect */
+    border-style: inset;
+}
+
+/* 4. Headings & Main Content */
+body::before {
+    content: ""; /* REQUIRED: pseudo-elements won't render without this */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Pushes the image behind all your text and buttons */
+    
+    background-image: url("https://static.wikitide.net/thebattleforfallonwiki/5/5a/FallonBG_remasterNIGHTtime.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1; /* You can change this to 0.4 or 0.5 if you want it dimmer! */
+}
+
+
+h1 {
+    background-color: rgba(17, 18, 22, 0.9); /* Adjust 0.2 for lighter/darker tint */
+    color: white; /* Optional: Makes text white for better contrast */
+    padding: 10px; /* Optional: Adds some breathing room */
+    border-radius: 5px;
+    border-width: 5px;
+	border-style: outset;
+	border-color: #020202;
+}
+
+
+.latestcontent {
+    display: block; /* block/flex is safer than inline for layout containers */
+}
+
+/* 5. Footer & Extra Links */
+.footer {
+    position: fixed;
+    bottom: 2%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer a,
+.socials-extra a {
+    color: #00e5ff; /* Retro neon cyan look for accent links */
+    text-decoration: none;
+}
+
+.footer a:hover,
+.socials-extra a:hover {
+    text-decoration: underline;
+}
+
+.bodycontent {
+    background-color: rgba(17, 18, 22, 0.9); /* Adjust 0.2 for lighter/darker tint */
+    color: white; /* Optional: Makes text white for better contrast */
+    padding: 10px; /* Optional: Adds some breathing room */
+    border-radius: 5px;
+    border-width: 5px;
+	  border-style: outset;
+	  border-color: #020202;
+}
+
+.social-btn {
+    display: inline-flex;  /* Keeps the button inline, but unlocks flexbox layouts */
+    align-items: center;   /* PERFECT ALIGNMENT: Forces elements to align vertically */
+    place-content: center;
+    gap: 10px;             /* Clean pixel gap between the logo and text */
+}
+
+.social-btn img {
+    height: 32px;          /* Restricts the logo height so it behaves */
+    width: auto;
+    display: block;
+}
+
+.social-btn span {
+    font-family: "Eas VHS", sans-serif; /* Your pixel font */
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 1;        /* Prevents extra font padding from pushing it down */
+}
